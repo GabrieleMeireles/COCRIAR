@@ -1,0 +1,497 @@
+/*https://www.homehost.com.br/blog/tutoriais/tabela-de-cores-html/*/
+
+body, h1, h2, h3, p, ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+body {
+  font-family: Georgia, serif;
+  color: #252525;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  max-width: 960px;/*definindo largura max*/
+  margin: 0 auto; /*centralizar horizontalmente*/
+}
+
+
+
+@media (max-width: 739px) {
+  .container {
+    flex-direction: column; /*empilhamento vertical*/
+    max-width: 300px;/*largura máxima para telas estreitas*/
+  }
+}
+
+
+/* Menu de navegação*/
+
+
+.menu {
+  background: #252525;
+  padding: 15px 0;
+}
+
+.logoBrafe {
+  margin: 0 10px;
+}
+
+.menuzinho a {
+  color: #fff;
+  font-size: 1.125em;
+  text-decoration: none;
+}
+
+.menuzinho a:hover{
+  background-color:#4F4F4F ;
+}
+
+
+.menuzinho {
+  align-self: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+
+.menuzinho ul {
+  float: right;
+  display: flex;
+  list-style: none;
+}
+
+.menuzinho ul li a {
+  padding: 20px;
+}
+
+
+ .logoBrafe {
+    margin: 0px;
+}
+
+
+.menuzinho ul li a {
+    padding-left: 0px;
+}
+
+
+.fixoNoTopo {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: #252525;
+  padding: 10px 0;
+ 
+}
+
+
+@media (max-width: 739px) {
+  .menuzinho {
+    margin: 0px 0 0 0; /**ou 10??**/
+  }
+}
+
+
+/* first-section - Principal */
+
+
+.first-section {
+  background: url("../img/bg-intro.jpg") no-repeat center center;
+  background-size: cover;  /* Mostra a imagem cobrindo toda a area */
+  color: #fff;
+  padding: 150px 0;
+  text-align: center;
+}
+
+
+@media (max-width: 739px) {
+  .first-section {
+    padding: 60px 0;
+  }
+}
+
+
+.first-section h1 {
+  font-size: 3em;  
+  text-transform: uppercase;
+}
+
+
+.first-section h1::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 4px;
+  background: #fff;
+  margin: 10px auto;
+}
+
+
+.first-section p {
+  font-style: italic;
+  font-size: 1.125em;
+}
+
+
+/* second-section - Sobre */
+
+
+.second-section {
+  padding: 60px 0;
+}
+
+
+.second-section h2 {
+  font-size: 2.25em;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+.sobre {
+  flex: 1;
+  margin: 0 10px;
+}
+
+
+@media (max-width: 739px) {
+  .sobre {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+
+.sobre img {
+  display: block;
+  max-width: 100%;
+}
+
+
+.sobre h3 {
+  font-size: 2.25em;
+  line-height: 1em;
+  background: #252525;
+  color: #fff;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+  width: 220px;
+  padding: 5px 0 10px 0;
+  top: -25px;
+}
+
+
+.second-section > p {
+  font-size: 1.125em;
+  line-height: 1.4em;
+  font-style: italic;
+  margin: 20px auto;
+  max-width: 460px;
+  text-align: center;
+}
+
+@media (max-width: 739px) {
+  .second-section > p {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+
+/* third-section - Produtos */
+
+
+.third-section {
+  background: #e7e4d8;
+  border-top: 5px solid #d6d3c8;
+  border-bottom: 5px solid #d6d3c8;
+  padding: 60px 0;
+}
+
+
+.produtos {
+  flex: 100;
+  margin: 0 10px 40px 10px;
+}
+
+
+.produtos h2 {
+  font-size: 2.25em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+/**Pseudoelemento**/
+.produtos h2::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: currentColor;
+  border-radius: 50%;
+  border: 5px solid #e7e4d8;
+  box-shadow: 0 0 0 10px currentColor;
+  margin: 20px auto;
+}
+
+
+h2.produtoPaulista::before {
+  color: #492901;
+}
+
+
+h2.produtoCarioca::before {
+  color: #c17139;
+}
+
+
+h2.produtoMineiro::before {
+  color: #d7a54d;
+}
+
+
+.produtos p {
+  font-size: 0.875em;
+  line-height: 1.4em;
+}
+
+
+.saibaMais-btn {
+  border: 3px solid #252525;
+  color: #252525;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.125em;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  width: 180px;
+  padding: 15px 0;
+  margin: 20px auto 0 auto;
+}
+
+.saibaMais-btn.new-color {
+    background-color: #252525; /* Nova cor de fundo quando clicado */
+    color: #fff; /* Nova cor do texto quando clicado */
+}
+
+
+@media (max-width: 739px) {
+  .produtos {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+
+
+/* Portfolio - fourth-section */
+
+
+.fourth-section {
+  padding: 60px 020px 0;
+}
+
+
+.Portifolio container {
+  margin-bottom: 40px;
+}
+
+
+.Portifolio-img,
+.infosPortifolio {
+  flex: 1;
+  margin: 0 10px;
+}
+
+
+.Portifolio-img img {
+  display: block;
+  max-width: 580%;
+}
+
+
+.infosPortifolio h2 {
+  font-size: 2.25em;
+  margin-bottom: 20px;
+}
+
+
+.infosPortifolio p {
+  font-size: 1.125em;
+  line-height: 1.4em;
+  max-width: 320px;
+  margin-bottom: 40px;
+}
+
+
+.infosPortifolio a {
+  font-size: 1.125em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 3px solid;
+  color: #252525;
+  padding: 8px 20px;
+}
+
+/*.verMapa-btn {
+
+}*/
+
+.verMapa-btn.clicked {
+    /* Estilos do botão "Ver Mapa" quando clicado */
+    background-color: #252525; /* Nova cor de fundo quando clicado */
+    color: #fff; /* Nova cor do texto quando clicado */
+  }
+
+@media (max-width: 739px) {
+  .Portifolio-img,
+  .infosPortifolio {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+
+
+/* Newsletter - fifth-section*/
+
+.fifth-section {
+  background: #e7e4d8;
+  padding: 30px 0;
+}
+
+
+.NewsletterTexto {
+  flex: 1;
+  margin: 0 10px;
+}
+
+
+.NewsletterTexto h2 {
+  font-size: 2.25em;
+}
+
+
+.NewsletterTexto p {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+
+.fifth-section form {
+  flex: 1;
+  margin: 7px 10px 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+
+.fifth-section form label {
+  display: none;
+}
+
+
+@media (max-width: 739px) {
+  .NewsletterTexto {
+    margin: 0 0 20px 0;
+  }
+
+
+  .fifth-section form {
+    margin: 0px;
+  }
+}
+
+
+.fifth-section input {
+  flex: 1;
+  max-width: 100%;
+  align-self: flex-start;
+  padding: 10px;
+  border: 3px solid #252525;
+  background: none;
+  font-size: 1.5em;
+  font-style: italic;
+  font-family: Georgia, serif;
+  /* margin-top: 8px; */
+}
+
+
+.fifth-section button {
+  flex: 1;
+  align-self: flex-start;
+  padding: 13px;
+  background: #252525;
+  border: none;
+  font-family: Georgia, serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  /* margin-top: 8px; */
+}
+
+/*.enviar-btn {
+
+}*/
+  
+.enviar-btn.clicked {
+   /* Estilo do botão quando clicado */
+  background-color: #e7e4d8; /* Nova cor de fundo quando clicado */
+  color: #252525; /* Nova cor do texto quando clicado */
+}
+
+.mensagem-confirmacao {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #5F9EA0;  
+}
+
+/* Footer */
+
+.footer {
+  background: #d6d3c8;
+  padding: 40px 0;
+}
+
+
+.footer p {
+  font-size: 1.125em;
+  line-height: 1.4em;
+  margin: 0 10px;
+  flex: 1;
+}
+
+
+.footerImg {
+  margin: 3px 10px 0 10px;
+}
+
+
+@media (max-width: 739px) {
+  .footer p {
+    margin: 0px;
+  }
+
+
+  .footerImg {
+    margin: 25px 0 -2px 0;
+  }
+}
